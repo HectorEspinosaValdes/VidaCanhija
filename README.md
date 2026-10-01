@@ -1,27 +1,34 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# 🐾 Vida Canhija (App en Desarrollo)
 
-* [/iosApp](./iosApp/iosApp) contains an iOS application. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+Aplicación diseñada para conectar a dueños de mascotas con servicios clave como veterinarias, pet shops, parques, albergues y más. 
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+## 📱 Prototipo y UI
+El flujo principal fue diseñado y maquetado previamente para asegurar una experiencia de usuario moderna e intuitiva antes del desarrollo.
 
-### Running the apps
+<img width="414" height="1910" alt="Inicio - Vida Canhija" src="https://github.com/user-attachments/assets/80f02fba-386b-42d3-9cdd-5691d668d8b2" />
+<img width="414" height="1968" alt="Directorio Pet-Friendly" src="https://github.com/user-attachments/assets/52d16e7e-2030-4055-a1b4-b5e568dac281" />
+<img width="414" height="1625" alt="Blog   Consejos Oficiales" src="https://github.com/user-attachments/assets/bf2630a2-e25c-45f0-bd0c-39b7eba72bd0" />
+<img width="414" height="1901" alt="Mi Perfil - Vida Canhija" src="https://github.com/user-attachments/assets/e76408c4-0207-44f8-929c-83d7a20a9170" />
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
 
-- Android app: `./gradlew :androidApp:assembleDebug`
-- iOS app: open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+## 🛠️ Stack Tecnológico
+Este proyecto está siendo desarrollado de forma nativa utilizando:
+* **Framework:** Kotlin Multiplatform (KMP)
+* **UI:** Jetpack Compose
+* **Arquitectura:** MVVM (Model-View-ViewModel)
+* **Gestión de Proyecto:** Jira / Scrum
+* **Maquetado:** Figma
 
-### Running tests
+## 🚀 Estado Actual: Sprint 1 (En curso)
+El proyecto acaba de iniciar. Durante las primeras dos semanas, el desarrollo está enfocado en la base estructural:
+1. Configuración de la arquitectura y separación de capas (Datos, Vista, Estados).
+2. Creación de *data classes* y modelos iniciales.
+3. Configuración del sistema de navegación.
+4. Implementación de la pantalla de inicio en Jetpack Compose.
 
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
+## ⚖️ Licencia y Derechos de Autor
+© 2026 Luis Héctor Espinosa Valdés. Todos los derechos reservados.
+El código fuente de este proyecto es público únicamente con fines informativos. No se otorga permiso para su uso comercial, distribución o modificación sin consentimiento previo por escrito.
 
 - Android tests: `./gradlew :shared:testAndroidHostTest`
 - iOS tests: `./gradlew :shared:iosSimulatorArm64Test`
